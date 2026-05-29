@@ -1,0 +1,110 @@
+# ================== 编辑器与 IDE 插件 ==================
+# VS Code 个人启动配置（不影响团队共享的 settings/tasks）
+/.vscode/launch.json
+
+# Eclipse / STM32CubeIDE 等本地设置
+/.settings
+
+# EIDE 插件本地日志与用户上下文（不共享）
+/.eide/log
+/.eide.usr.ctx.json
+
+# ================== EIDE 模板 ==================
+# 导出的工程模板和打包文件
+*.ept
+*.eide-template
+
+# ================== 通用编译输出 ==================
+# 所有 IDE 都可能生成的输出目录
+/build
+/bin
+/obj
+/out
+/Output
+/Release
+/Debug
+
+# 固件、映射、链接中间文件
+*.bin
+*.hex
+*.elf
+*.axf
+*.o
+*.d
+*.out
+*.list
+*.map
+*.srec
+*.sym
+
+# 静态库（如果它们是从源码构建的，建议忽略；若是第三方预编译库则去掉下面这行）
+# *.a
+# *.lib
+
+# 链接器生成的 scatter 文件有时在输出目录，但源代码级的 .sct 不可忽略，此条根据项目决定：
+# /*.sct
+
+# ================== Keil MDK 专有 ==================
+# 个人窗口布局和工程选项
+MDK-ARM/*.uvoptx
+MDK-ARM/*.uvgui.*
+MDK-ARM/*.uvprojx.bak
+
+# 编译生成的临时目录（体积大，可重新生成）
+MDK-ARM/DebugConfig/
+MDK-ARM/RTE/
+MDK-ARM/Listings/
+MDK-ARM/Objects/
+
+# 本地测试或临时工程子目录（如你之前出现的 Pallas_GD）
+MDK-ARM/Pallas_GD/
+
+# ================== 其他常见项目 ==================
+# CMSIS Pack 解压后的设备支持文件（通常由 RTE 管理，不提交）
+/CMSIS
+/Packs
+
+# 某些工具生成的 JLink 日志或设置
+*.jlink
+JLinkLog.txt
+JLinkSettings.ini
+
+# ================== 操作系统杂项 ==================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+*~
+
+# ================== 开发板/调试器痕迹 ==================
+# OpenOCD / J-Link 日志
+openocd.log
+*.jtag
+
+# ================== 测试与临时文件 ==================
+# 单元测试报告
+/report
+/test-output
+/coverage
+
+# 压缩包残留
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+# 其他临时文件
+*.tmp
+*.bak
+*.cache
